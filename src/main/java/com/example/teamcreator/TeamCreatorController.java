@@ -20,6 +20,7 @@ public class TeamCreatorController {
     @GetMapping("/names/{name}")
     public void addNewName(@PathVariable("name") String name) {
         System.out.println(name);
+        nameService.addName(name);
     }
     @GetMapping("/names")
     public List<String> getAllNames(){
